@@ -1,4 +1,5 @@
 /* URRAAAK FITNESS — estilo "forja": café oscuro, dorado y hueso */
+@property --b{syntax:"<percentage>";inherits:false;initial-value:-30%}
 :root{
   --hierro:#17100A;
   --forja:#241811;
@@ -44,12 +45,12 @@ a{color:inherit}
 .hero-titulo{margin:0;font:900 clamp(4.2rem,13vw,10.5rem)/.86 var(--titulo);text-transform:uppercase;letter-spacing:-.01em;
   --mx:78%;--my:30%;
   background:
-    linear-gradient(100deg,transparent 0,transparent 44%,rgba(255,255,255,.95) 49.2%,#fff 50%,rgba(255,255,255,.95) 50.8%,transparent 56%,transparent 100%) 160% 0/260% 100% no-repeat,
+    linear-gradient(100deg,transparent calc(var(--b) - 9%),rgba(255,255,255,.97) var(--b),transparent calc(var(--b) + 9%)) 0 0/100% 100% no-repeat,
     radial-gradient(circle at var(--mx) var(--my),var(--ambar) 0,var(--brasa) 14%,#9A6416 30%,var(--hueso) 62%);
   -webkit-background-clip:text;background-clip:text;color:transparent;
-  animation:ojo-de-gato 6s cubic-bezier(.5,0,.2,1) 1.2s infinite}
-/* Ojo de gato: una línea de luz fina que cruza las letras y se apaga */
-@keyframes ojo-de-gato{0%{background-position:160% 0,0 0}38%,100%{background-position:-60% 0,0 0}}
+  animation:ojo-de-gato 7s ease-in-out 1s infinite alternate}
+/* Ojo de gato: una línea de luz que va de lado a lado, ida y vuelta, con pausa entre pasadas */
+@keyframes ojo-de-gato{0%,30%{--b:-30%}70%,100%{--b:130%}}
 .hero-sub{max-width:34rem;margin:1.6rem 0 2rem;font-size:1.2rem;color:var(--hueso)}
 .hero-botones{display:flex;flex-wrap:wrap;gap:1rem}
 
