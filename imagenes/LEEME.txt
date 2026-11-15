@@ -1,0 +1,8 @@
+Pon aquí las fotos con estos nombres exactos (formato .jpg):
+
+rair-principal.jpg   -> foto de portada (vertical, 4:5)
+rair-sobre-mi.jpg    -> retrato para la sección "Sobre mí" (vertical, 4:5)
+galeria-1.jpg ... galeria-6.jpg -> fotos entrenando / entrenando a otros / instalaciones (cuadradas)
+
+Mientras una foto no exista, la página la oculta sola y no se ve nada roto.
+Consejo: comprime las fotos (menos de 300 KB cada una) para que la página cargue rápido.

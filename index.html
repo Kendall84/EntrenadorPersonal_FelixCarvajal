@@ -1,276 +1,199 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Félix Carvajal | Entrenador Personal</title>
-  <meta name="description" content="Félix Carvajal, entrenador personal. Entrenamiento a tu medida para transformar tu cuerpo y tu salud.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>URRAAAK FITNESS | Rair Mathews, entrenador personal</title>
+  <meta name="description" content="Rair Mathews, entrenador personal en la Gran Área Metropolitana (GAM), Costa Rica. Fuerza, hipertrofia, pérdida de grasa y hábitos que duran. Forjando tu prime.">
+  <meta name="theme-color" content="#17100A">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta property="og:title" content="URRAAAK FITNESS | Forjando tu prime">
+  <meta property="og:description" content="Entrenamiento personal con Rair Mathews. Fuerza, hipertrofia y hábitos sostenibles.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Big+Shoulders+Display:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Big+Shoulders+Display:wght@700;800;900&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
 
-  <!-- NAVEGACIÓN -->
-  <header class="nav" id="nav">
-    <a href="#inicio" class="logo">FÉLIX<span>CARVAJAL</span></a>
-    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="menu" id="menu">
+  <header class="cabecera" id="inicio">
+    <a class="marca" href="#inicio" aria-label="URRAAAK FITNESS, inicio">URRAAAK<span>FITNESS</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" class="nav" aria-label="Principal">
       <a href="#sobre-mi">Sobre mí</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#formacion">Formación</a>
+      <a href="#metodo">Método</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#trayectoria">Trayectoria</a>
       <a href="#servicios">Servicios</a>
-      <a href="#galeria">Galería</a>
-      <a href="#contacto" class="btn-nav">Contactar</a>
+      <a class="nav-cta" href="#contacto">Empieza hoy</a>
     </nav>
   </header>
 
-  <!-- INICIO / HERO -->
-  <section class="hero" id="inicio">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <p class="role">Félix Carvajal · Entrenador personal</p>
-      <h1><span class="h-line">Entrena</span><span class="h-line outline">con propósito</span></h1>
-      <p class="hero-text">Planes de entrenamiento a tu medida, con seguimiento real, para que ganes fuerza, salud y confianza.</p>
-      <div class="hero-btns">
-        <a href="#contacto" class="btn btn-primary">Empieza hoy</a>
-        <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
-      </div>
-    </div>
-    <!-- Cambiar por foto de Félix en la carpeta imagenes/ -->
-    <div class="hero-photo" id="heroPhoto">
-      <img src="imagenes/felix-principal.jpg" alt="Félix Carvajal, entrenador personal" onerror="this.parentElement.classList.add('placeholder')">
-      <span class="ph-text">Foto principal<br><small>imagenes/felix-principal.jpg</small></span>
-    </div>
-    
-  </section>
-  <div class="marquee" aria-hidden="true"><div class="marquee-track">
-    <span>Fuerza</span><span>Hipertrofia</span><span>Pérdida de peso</span><span>Movilidad</span><span>Funcional</span><span>Resistencia</span>
-    <span>Fuerza</span><span>Hipertrofia</span><span>Pérdida de peso</span><span>Movilidad</span><span>Funcional</span><span>Resistencia</span>
-  </div></div>
-
-
-  <!-- CONTADORES -->
-  <section class="stats">
-    <div class="stat"><span class="num" data-target="5">0</span><span class="plus">+</span><p>Años de experiencia</p></div>
-    <div class="stat"><span class="num" data-target="150">0</span><span class="plus">+</span><p>Clientes entrenados</p></div>
-    <div class="stat"><span class="num" data-target="10">0</span><span class="plus">+</span><p>Certificaciones</p></div>
-    <div class="stat"><span class="num" data-target="100">0</span><span class="plus">%</span><p>Compromiso</p></div>
-  </section>
-
-  <!-- SOBRE MÍ -->
-  <section class="section" id="sobre-mi">
-    <div class="container two-col">
-      <div class="about-photo reveal">
-        <div class="photo-frame" id="aboutPhoto">
-          <img src="imagenes/felix-sobre-mi.jpg" alt="Félix Carvajal entrenando" onerror="this.parentElement.classList.add('placeholder')">
-          <span class="ph-text">Foto sobre mí<br><small>imagenes/felix-sobre-mi.jpg</small></span>
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="hero-texto">
+        <p class="hero-rol">Rair Mathews · Entrenador personal</p>
+        <h1 id="titulo-hero" class="hero-titulo">Forjando<br>tu prime.</h1>
+        <p class="hero-sub">Entrenamiento de fuerza inteligente, progresivo y basado en resultados. Para que llegues a tu mejor versión y te quedes ahí.</p>
+        <div class="hero-botones">
+          <a class="btn btn-brasa" href="#contacto">Empieza hoy</a>
+          <a class="btn btn-borde" href="#servicios">Ver servicios</a>
         </div>
       </div>
-      <div class="about-text reveal">
-        <h2>Pasión por el deporte, compromiso con tus resultados</h2>
-        <p>Soy Félix Carvajal, entrenador personal apasionado por ayudar a las personas a mejorar su condición física y su calidad de vida. [Aquí va una breve historia de Félix: cómo empezó en el deporte y qué lo motiva.]</p>
-        <p>Mi filosofía es simple: cada persona es distinta, por eso cada plan es diseñado a tu medida, con seguimiento real y metas claras.</p>
-        <ul class="check-list">
-          <li>Planes 100% personalizados</li>
-          <li>Seguimiento constante de tu progreso</li>
-          <li>Entrenamiento seguro y con técnica correcta</li>
+      <figure class="foto foto-hero" data-fallback="U">
+        <img src="imagenes/rair-principal.jpg" alt="Rair Mathews entrenando" width="800" height="1000" fetchpriority="high">
+      </figure>
+    </section>
+
+    <section class="cifras" aria-label="En números">
+      <div><strong>2017</strong><span>Año en que empezó su camino en el entrenamiento</span></div>
+      <div><strong>5</strong><span>Años como instructor</span></div>
+      <div><strong>+20</strong><span>Personas acompañadas hacia sus objetivos</span></div>
+    </section>
+
+    <section class="seccion" id="sobre-mi" aria-labelledby="t-sobre">
+      <div class="dos-col">
+        <figure class="foto foto-sobre" data-fallback="R">
+          <img src="imagenes/rair-sobre-mi.jpg" alt="Retrato de Rair Mathews" width="800" height="1000" loading="lazy">
+        </figure>
+        <div>
+          <h2 id="t-sobre" class="titulo">Primero lo viví yo.</h2>
+          <p>Soy un apasionado del fitness y el entrenamiento de fuerza. Mi camino comenzó en 2017, cuando decidí tomar el control de mi condición física y vivir en primera persona el poder de la disciplina, la constancia y el entrenamiento.</p>
+          <p>Con los años transformé mi propio físico, adquirí conocimientos y gané experiencia ayudando a más de 20 personas a trabajar por sus objetivos. Hoy mi pasión es compartir lo aprendido, motivar a otros y demostrar que, con compromiso y buena planificación, todos podemos construir una mejor versión de nosotros mismos.</p>
+          <p>No enseño solo desde la teoría. Conozco de primera mano lo que cuesta construir resultados, así que adapto cada plan a tus capacidades y a tu meta.</p>
+          <blockquote class="cita">
+            «No entrenamos solamente para cambiar el físico. Entrenamos para construir carácter, superar límites y convertirnos en nuestra mejor versión».
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion-forja" id="metodo" aria-labelledby="t-metodo">
+      <h2 id="t-metodo" class="titulo">Entrenar con propósito</h2>
+      <p class="intro">No se trata de levantar pesas o terminar agotado. Se trata de mejorar un poco cada semana y construir hábitos que sostengas. Mi método descansa en cuatro cosas.</p>
+      <ul class="pilares">
+        <li><h3>Disciplina</h3><p>Aparecer también los días que no hay ganas.</p></li>
+        <li><h3>Consistencia</h3><p>Lo que repites es lo que cambia tu cuerpo.</p></li>
+        <li><h3>Técnica</h3><p>Moverte bien para progresar sin lesionarte.</p></li>
+        <li><h3>Esfuerzo</h3><p>Una carga y un ritmo que te exigen de verdad.</p></li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="objetivos" aria-labelledby="t-obj">
+      <div class="dos-col dos-col-ancha">
+        <div>
+          <h2 id="t-obj" class="titulo">¿Qué quieres lograr?</h2>
+          <p>Trabajo con hombres y mujeres que quieren transformar su condición física, sin importar su nivel. Desde quienes empiezan hasta quienes ya entrenan y buscan el siguiente nivel.</p>
+          <p class="destacado">Lo importante no es dónde comienzas, sino el compromiso que estás dispuesto a asumir.</p>
+        </div>
+        <ul class="objetivos">
+          <li>Pérdida de grasa y reducción de peso</li>
+          <li>Ganancia de masa muscular e hipertrofia</li>
+          <li>Recomposición corporal</li>
+          <li>Desarrollo de fuerza y resistencia</li>
+          <li>Mejor acondicionamiento físico</li>
+          <li>Mejor rendimiento deportivo</li>
+          <li>Hábitos saludables y disciplina</li>
         </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- HABILIDADES -->
-  <section class="section dark" id="habilidades">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Lo que domino</h2>
-      </div>
-      <div class="skills">
-        <div class="skill reveal">
-          <div class="skill-top"><span>Entrenamiento de fuerza</span><span>90%</span></div>
-          <div class="bar"><div class="fill" data-width="90"></div></div>
-        </div>
-        <div class="skill reveal">
-          <div class="skill-top"><span>Pérdida de peso</span><span>95%</span></div>
-          <div class="bar"><div class="fill" data-width="95"></div></div>
-        </div>
-        <div class="skill reveal">
-          <div class="skill-top"><span>Hipertrofia / ganancia muscular</span><span>90%</span></div>
-          <div class="bar"><div class="fill" data-width="90"></div></div>
-        </div>
-        <div class="skill reveal">
-          <div class="skill-top"><span>Acondicionamiento funcional</span><span>85%</span></div>
-          <div class="bar"><div class="fill" data-width="85"></div></div>
-        </div>
-        <div class="skill reveal">
-          <div class="skill-top"><span>Movilidad y flexibilidad</span><span>80%</span></div>
-          <div class="bar"><div class="fill" data-width="80"></div></div>
-        </div>
-        <div class="skill reveal">
-          <div class="skill-top"><span>Nutrición deportiva básica</span><span>75%</span></div>
-          <div class="bar"><div class="fill" data-width="75"></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section class="seccion seccion-forja" id="trayectoria" aria-labelledby="t-tray">
+      <h2 id="t-tray" class="titulo">Formación y trayectoria</h2>
+      <dl class="datos">
+        <div><dt>Formación</dt><dd>Arena Trek e IPT</dd></div>
+        <div><dt>Certificación</dt><dd>Acondicionamiento físico aplicado al entrenamiento contra resistencia</dd></div>
+        <div><dt>Experiencia</dt><dd>Mundofitness Limón</dd></div>
+        <div><dt>Ha entrenado junto a</dt><dd>Kidder Marshal y Froylan Guthrie</dd></div>
+        <div><dt>Patrocinador</dt><dd>C4 Energy</dd></div>
+      </dl>
+    </section>
 
-  <!-- FORMACIÓN Y EXPERIENCIA -->
-  <section class="section" id="formacion">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Formación y experiencia</h2>
-      </div>
-      <div class="timeline">
-        <div class="t-item reveal">
-          <span class="t-year">Año</span>
-          <div class="t-card">
-            <h3>[Título o carrera]</h3>
-            <p>[Institución / universidad]</p>
-          </div>
-        </div>
-        <div class="t-item reveal">
-          <span class="t-year">Año</span>
-          <div class="t-card">
-            <h3>[Certificación 1]</h3>
-            <p>[Entidad que la otorga]</p>
-          </div>
-        </div>
-        <div class="t-item reveal">
-          <span class="t-year">Año</span>
-          <div class="t-card">
-            <h3>[Certificación 2]</h3>
-            <p>[Entidad que la otorga]</p>
-          </div>
-        </div>
-        <div class="t-item reveal">
-          <span class="t-year">Año – Actual</span>
-          <div class="t-card">
-            <h3>[Gimnasio / lugar donde ha trabajado]</h3>
-            <p>[Puesto y funciones principales]</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section class="seccion" id="servicios" aria-labelledby="t-serv">
+      <h2 id="t-serv" class="titulo">Elige cómo entrenar</h2>
+      <ul class="servicios">
+        <li>
+          <div><h3>Entrenamiento personal</h3><p>Un plan hecho a tu medida, con seguimiento cercano y ajustes según tu progreso.</p></div>
+          <a class="btn btn-borde" href="#contacto" data-servicio="Entrenamiento personal">Consultar</a>
+        </li>
+        <li>
+          <div><h3>Preparación física</h3><p>Fuerza, resistencia y acondicionamiento para mejorar tu rendimiento deportivo.</p></div>
+          <a class="btn btn-borde" href="#contacto" data-servicio="Preparación física">Consultar</a>
+        </li>
+        <li>
+          <div><h3>Asesoramiento deportivo</h3><p>Orientación para organizar tu entrenamiento, tus metas y tus hábitos.</p></div>
+          <a class="btn btn-borde" href="#contacto" data-servicio="Asesoramiento deportivo">Consultar</a>
+        </li>
+      </ul>
+    </section>
 
-  <!-- SERVICIOS -->
-  <section class="section dark" id="servicios">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Elige tu plan</h2>
+    <section class="seccion seccion-forja" id="resultados" aria-labelledby="t-res" hidden>
+      <h2 id="t-res" class="titulo">En acción</h2>
+      <div class="galeria">
+        <figure><img src="imagenes/galeria-1.jpg" alt="Sesión de entrenamiento" width="600" height="600"></figure>
+        <figure><img src="imagenes/galeria-2.jpg" alt="Sesión de entrenamiento" width="600" height="600"></figure>
+        <figure><img src="imagenes/galeria-3.jpg" alt="Sesión de entrenamiento" width="600" height="600"></figure>
+        <figure><img src="imagenes/galeria-4.jpg" alt="Sesión de entrenamiento" width="600" height="600"></figure>
+        <figure><img src="imagenes/galeria-5.jpg" alt="Sesión de entrenamiento" width="600" height="600"></figure>
+        <figure><img src="imagenes/galeria-6.jpg" alt="Sesión de entrenamiento" width="600" height="600"></figure>
       </div>
-      <div class="cards">
-        <article class="card reveal">
-          <div class="icon">🏋️</div>
-          <h3>Entrenamiento personalizado</h3>
-          <p>Sesiones individuales, presenciales, con rutina y atención totalmente enfocada en ti.</p>
-        </article>
-        <article class="card reveal featured">
-          <span class="badge">Más popular</span>
-          <div class="icon">📱</div>
-          <h3>Asesoría online</h3>
-          <p>Plan de entrenamiento en tu celular con seguimiento semanal y ajustes según tu avance.</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">👥</div>
-          <h3>Grupos reducidos</h3>
-          <p>Entrena con amigos o familia en sesiones dinámicas, motivadoras y más económicas.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- GALERÍA -->
-  <section class="section" id="galeria">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Resultados y acción</h2>
-      </div>
-      <div class="gallery">
-        <figure class="g-item big reveal"><img src="imagenes/galeria-1.jpg" alt="Entrenamiento 1" onerror="this.remove()"><span class="ph-text">Foto 1<br><small>imagenes/galeria-1.jpg</small></span></figure>
-        <figure class="g-item reveal"><img src="imagenes/galeria-2.jpg" alt="Entrenamiento 2" onerror="this.remove()"><span class="ph-text">Foto 2<br><small>imagenes/galeria-2.jpg</small></span></figure>
-        <figure class="g-item reveal"><img src="imagenes/galeria-3.jpg" alt="Entrenamiento 3" onerror="this.remove()"><span class="ph-text">Foto 3<br><small>imagenes/galeria-3.jpg</small></span></figure>
-        <figure class="g-item reveal"><img src="imagenes/galeria-4.jpg" alt="Entrenamiento 4" onerror="this.remove()"><span class="ph-text">Foto 4<br><small>imagenes/galeria-4.jpg</small></span></figure>
-        <figure class="g-item reveal"><img src="imagenes/galeria-5.jpg" alt="Entrenamiento 5" onerror="this.remove()"><span class="ph-text">Foto 5<br><small>imagenes/galeria-5.jpg</small></span></figure>
-        <figure class="g-item wide reveal"><img src="imagenes/galeria-6.jpg" alt="Entrenamiento 6" onerror="this.remove()"><span class="ph-text">Foto 6<br><small>imagenes/galeria-6.jpg</small></span></figure>
-      </div>
-    </div>
-  </section>
+    <section class="seccion" id="testimonios" aria-labelledby="t-test" hidden>
+      <h2 id="t-test" class="titulo">Lo que dicen quienes entrenan conmigo</h2>
+      <div class="testimonios" id="lista-testimonios"></div>
+    </section>
 
-  <!-- TESTIMONIOS -->
-  <section class="section dark" id="testimonios">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Lo que dicen mis clientes</h2>
-      </div>
-      <div class="slider reveal" id="slider">
-        <div class="slide active">
-          <p>"[Testimonio real de un cliente cuando Félix lo tenga.]"</p>
-          <strong>— Nombre del cliente</strong>
+    <section class="seccion contacto" id="contacto" aria-labelledby="t-cont">
+      <div class="dos-col dos-col-ancha">
+        <div>
+          <h2 id="t-cont" class="titulo">Empieza hoy.</h2>
+          <p>Cuéntame tu meta y te respondo por WhatsApp.</p>
+          <ul class="vias">
+            <li><span>WhatsApp y teléfono</span><a href="https://wa.me/50672431311" target="_blank" rel="noopener noreferrer">7243 1311</a></li>
+            <li><span>Correo</span><a href="mailto:rmathews07944@gmail.com">rmathews07944@gmail.com</a></li>
+            <li><span>Zona</span><b>Gran Área Metropolitana (GAM), Costa Rica</b></li>
+            <li><span>Instagram</span><a href="https://www.instagram.com/urraaaak/" target="_blank" rel="noopener noreferrer">@urraaaak</a></li>
+          </ul>
         </div>
-        <div class="slide">
-          <p>"[Segundo testimonio.]"</p>
-          <strong>— Nombre del cliente</strong>
-        </div>
-        <div class="slide">
-          <p>"[Tercer testimonio.]"</p>
-          <strong>— Nombre del cliente</strong>
-        </div>
-        <div class="dots" id="dots"></div>
-      </div>
-    </div>
-  </section>
+        <form id="form-contacto" class="form" novalidate>
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" maxlength="60" autocomplete="name" required>
 
-  <!-- CONTACTO -->
-  <section class="section contact" id="contacto">
-    <div class="container two-col">
-      <div class="reveal">
-        <h2>¿Listo para empezar?</h2>
-        <p>Escríbeme y coordinemos tu primera sesión. Cuéntame tu meta y yo me encargo del plan.</p>
-        <ul class="contact-list">
-          <li>📞 <a href="tel:+50600000000">+506 0000 0000</a></li>
-          <li>✉️ <a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a></li>
-          <li>📍 [Ubicación / gimnasio donde entrena]</li>
-          <li>🕒 [Horario de atención]</li>
-        </ul>
-        <div class="socials">
-          <a href="#" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
-          <a href="#" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
-          <a href="#" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
-          <a href="#" aria-label="YouTube" target="_blank" rel="noopener">YouTube</a>
-        </div>
-      </div>
-      <form class="form reveal" id="contactForm">
-        <label>Nombre
-          <input type="text" id="nombre" placeholder="Tu nombre" required>
-        </label>
-        <label>Meta principal
-          <select id="meta">
-            <option>Bajar de peso</option>
+          <label for="meta">Meta principal</label>
+          <select id="meta" name="meta">
+            <option>Perder grasa</option>
             <option>Ganar músculo</option>
-            <option>Mejorar condición física</option>
-            <option>Preparación deportiva</option>
-            <option>Otro</option>
+            <option>Recomposición corporal</option>
+            <option>Ganar fuerza y resistencia</option>
+            <option>Mejorar mi rendimiento deportivo</option>
+            <option>Crear el hábito de entrenar</option>
+            <option>Otra</option>
           </select>
-        </label>
-        <label>Mensaje
-          <textarea id="mensaje" rows="4" placeholder="Cuéntame un poco sobre ti" required></textarea>
-        </label>
-        <button type="submit" class="btn btn-primary">Enviar por WhatsApp</button>
-      </form>
-    </div>
-  </section>
 
-  <footer class="footer">
-    <p>© <span id="year"></span> Félix Carvajal · Entrenador Personal</p>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" maxlength="400" placeholder="Cuéntame tu nivel, tu horario y qué buscas."></textarea>
+
+          <p id="estado" class="estado" role="status" aria-live="polite"></p>
+          <button class="btn btn-brasa" type="submit">Enviar por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p class="pie-marca">URRAAAK FITNESS — Forjando tu prime.</p>
+    <p>© <span id="anio">2026</span> Rair Mathews. Todos los derechos reservados.</p>
   </footer>
 
-  <a href="https://wa.me/50600000000" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp" id="waFloat">💬</a>
+  <a class="wa-flotante" href="https://wa.me/50672431311?text=Hola%20Rair%2C%20quiero%20empezar%20a%20entrenar." target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 2.4a10.6 10.6 0 1 1-5.4 19.7l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 0 1 16 5.4zm-4 5.3c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.500 3.900c.2.2 2.600 4.100 6.400 5.600 3.200 1.200 3.800 1 4.500.9.700-.1 2.200-.9 2.500-1.800.3-.9.3-1.600.2-1.800-.1-.2-.4-.3-.8-.5l-2.600-1.200c-.3-.1-.6-.2-.8.2-.3.400-1 1.200-1.200 1.400-.2.200-.4.300-.8.100-.4-.2-1.600-.6-3-1.900-1.100-1-1.900-2.200-2.100-2.600-.2-.4 0-.6.200-.8l.6-.7c.2-.2.200-.4.400-.6.100-.3.100-.5 0-.7l-1.200-2.900c-.3-.7-.6-.6-.8-.6z"/></svg>
+  </a>
 
-  <script src="script.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
