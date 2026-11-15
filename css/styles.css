@@ -43,8 +43,13 @@ a{color:inherit}
 .hero-rol{margin:0 0 1rem;color:var(--ceniza);font-weight:500;font-size:1.05rem}
 .hero-titulo{margin:0;font:900 clamp(4.2rem,13vw,10.5rem)/.86 var(--titulo);text-transform:uppercase;letter-spacing:-.01em;
   --mx:78%;--my:30%;
-  background:radial-gradient(circle at var(--mx) var(--my),var(--ambar) 0,var(--brasa) 14%,#9A6416 30%,var(--hueso) 62%);
-  -webkit-background-clip:text;background-clip:text;color:transparent}
+  background:
+    linear-gradient(100deg,transparent 0,transparent 44%,rgba(255,255,255,.95) 49.2%,#fff 50%,rgba(255,255,255,.95) 50.8%,transparent 56%,transparent 100%) 160% 0/260% 100% no-repeat,
+    radial-gradient(circle at var(--mx) var(--my),var(--ambar) 0,var(--brasa) 14%,#9A6416 30%,var(--hueso) 62%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:ojo-de-gato 6s cubic-bezier(.5,0,.2,1) 1.2s infinite}
+/* Ojo de gato: una línea de luz fina que cruza las letras y se apaga */
+@keyframes ojo-de-gato{0%{background-position:160% 0,0 0}38%,100%{background-position:-60% 0,0 0}}
 .hero-sub{max-width:34rem;margin:1.6rem 0 2rem;font-size:1.2rem;color:var(--hueso)}
 .hero-botones{display:flex;flex-wrap:wrap;gap:1rem}
 
@@ -147,3 +152,17 @@ a{color:inherit}
 }
 @media (max-width:480px){.pilares{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Cintas diagonales con lo que domina */
+.cintas{position:relative;height:11rem;overflow:hidden;margin:1rem 0 2rem}
+.cinta{position:absolute;left:-6%;width:112%;top:50%;overflow:hidden;white-space:nowrap}
+.cinta-frente{background:var(--brasa);color:var(--hierro);transform:translateY(-50%) rotate(-3.5deg);z-index:2;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.cinta-atras{background:var(--forja);color:var(--ambar);border-block:2px solid var(--brasa);transform:translateY(-50%) rotate(3.5deg)}
+.cinta-pista{display:flex;width:max-content;animation:cinta 38s linear infinite}
+.cinta-atras .cinta-pista{animation-duration:46s;animation-direction:reverse}
+.cinta-grupo{display:flex;flex-shrink:0}
+.cinta-grupo span{display:flex;align-items:center;padding:.7rem 0;font:900 clamp(1.5rem,3.4vw,2.6rem)/1 var(--titulo);text-transform:uppercase;letter-spacing:.02em}
+.cinta-grupo span::after{content:"";width:.55rem;height:.55rem;margin:0 1.6rem;background:currentColor;transform:rotate(45deg)}
+@keyframes cinta{to{transform:translateX(-50%)}}
+@media (max-width:860px){.cintas{height:8.5rem}}
+@media (prefers-reduced-motion:reduce){.hero-titulo,.cinta-pista{animation:none}}
