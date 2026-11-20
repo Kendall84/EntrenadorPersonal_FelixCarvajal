@@ -11,6 +11,9 @@
   <meta property="og:title" content="URRAAAK FITNESS | Forjando tu prime">
   <meta property="og:description" content="Entrenamiento personal con Rair Mathews. Fuerza, hipertrofia y hábitos sostenibles.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kendall84.github.io/EntrenadorPersonal_urraaakfitness/">
+  <meta property="og:image" content="https://kendall84.github.io/EntrenadorPersonal_urraaakfitness/imagenes/rair-principal.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +33,8 @@
       <a href="#objetivos">Objetivos</a>
       <a href="#trayectoria">Trayectoria</a>
       <a href="#servicios">Servicios</a>
+      <a href="#resultados">Galería</a>
+      <a href="#videos">Videos</a>
       <a class="nav-cta" href="#contacto">Empieza hoy</a>
     </nav>
   </header>
@@ -47,7 +52,7 @@
         </div>
       </div>
       <figure class="foto foto-hero" data-fallback="U">
-        <img src="imagenes/rair-principal.jpg" alt="Rair Mathews entrenando" width="800" height="1000" fetchpriority="high">
+        <img src="imagenes/rair-principal.jpg" alt="Entrenador sentado en un banco del gimnasio entre series, con mancuernas al frente" width="1000" height="1495" fetchpriority="high">
       </figure>
     </section>
 
@@ -65,7 +70,7 @@
     <section class="seccion" id="sobre-mi" aria-labelledby="t-sobre">
       <div class="dos-col">
         <figure class="foto foto-sobre" data-fallback="R">
-          <img src="imagenes/rair-sobre-mi.jpg" alt="Retrato de Rair Mathews" width="800" height="1000" loading="lazy">
+          <img src="imagenes/rair-sobre-mi.jpg" alt="Curl de bíceps con barra en el gimnasio" width="1000" height="1244" loading="lazy">
         </figure>
         <div>
           <h2 id="t-sobre" class="titulo">Primero lo viví yo.</h2>
@@ -141,13 +146,25 @@
     <section class="seccion seccion-forja" id="resultados" aria-labelledby="t-res" hidden>
       <h2 id="t-res" class="titulo">En acción</h2>
       <div class="galeria">
-        <figure><img src="imagenes/galeria-1.jpg" alt="Sesión de entrenamiento" width="600" height="600"></figure>
-        <figure><img src="imagenes/galeria-2.jpg" alt="Sesión de entrenamiento" width="600" height="600"></figure>
-        <figure><img src="imagenes/galeria-3.jpg" alt="Sesión de entrenamiento" width="600" height="600"></figure>
-        <figure><img src="imagenes/galeria-4.jpg" alt="Sesión de entrenamiento" width="600" height="600"></figure>
-        <figure><img src="imagenes/galeria-5.jpg" alt="Sesión de entrenamiento" width="600" height="600"></figure>
-        <figure><img src="imagenes/galeria-6.jpg" alt="Sesión de entrenamiento" width="600" height="600"></figure>
+        <figure><button class="abrir" type="button" data-visor="foto" data-src="imagenes/galeria-1.jpg" data-alt="Sentado en un banco entre series, con mancuernas al frente" aria-label="Ampliar foto: Sentado en un banco entre series, con mancuernas al frente"><img src="imagenes/galeria-1.jpg" alt="Sentado en un banco entre series, con mancuernas al frente" width="900" height="1346"></button></figure>
+        <figure><button class="abrir" type="button" data-visor="foto" data-src="imagenes/galeria-3.jpg" data-alt="Curl de bíceps en máquina predicador" aria-label="Ampliar foto: Curl de bíceps en máquina predicador"><img src="imagenes/galeria-3.jpg" alt="Curl de bíceps en máquina predicador" width="900" height="1121"></button></figure>
+        <figure><button class="abrir" type="button" data-visor="foto" data-src="imagenes/galeria-4.jpg" data-alt="Pose de bíceps frente al espejo del gimnasio" aria-label="Ampliar foto: Pose de bíceps frente al espejo del gimnasio"><img src="imagenes/galeria-4.jpg" alt="Pose de bíceps frente al espejo del gimnasio" width="900" height="1319"></button></figure>
+        <figure><button class="abrir" type="button" data-visor="foto" data-src="imagenes/galeria-6.jpg" data-alt="Curl de bíceps con mancuerna" aria-label="Ampliar foto: Curl de bíceps con mancuerna"><img src="imagenes/galeria-6.jpg" alt="Curl de bíceps con mancuerna" width="790" height="1058"></button></figure>
+        <figure><button class="abrir" type="button" data-visor="foto" data-src="imagenes/galeria-5.jpg" data-alt="De pie en el gimnasio con camiseta negra y short naranja" aria-label="Ampliar foto: De pie en el gimnasio con camiseta negra y short naranja"><img src="imagenes/galeria-5.jpg" alt="De pie en el gimnasio con camiseta negra y short naranja" width="690" height="1230"></button></figure>
+        <figure><button class="abrir" type="button" data-visor="foto" data-src="imagenes/galeria-2.jpg" data-alt="Extensión de tríceps en polea" aria-label="Ampliar foto: Extensión de tríceps en polea"><img src="imagenes/galeria-2.jpg" alt="Extensión de tríceps en polea" width="900" height="1112"></button></figure>
       </div>
+    </section>
+
+    <section class="seccion" id="videos" aria-labelledby="t-vid">
+      <h2 id="t-vid" class="titulo">Entrenando en movimiento</h2>
+      <p class="intro">Toca un video para verlo en grande y con sonido.</p>
+      <ul class="videos">
+        <li><button class="video-card" type="button" data-visor="video" data-src="videos/entreno-1.mp4" aria-label="Ver video en grande: Pierna"><video src="videos/entreno-1.mp4" poster="imagenes/entreno-1.jpg" width="464" height="832" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true" data-auto></video><span class="play" aria-hidden="true"></span><span class="video-etq">Pierna</span></button></li>
+        <li><button class="video-card" type="button" data-visor="video" data-src="videos/entreno-2.mp4" aria-label="Ver video en grande: Polea"><video src="videos/entreno-2.mp4" poster="imagenes/entreno-2.jpg" width="464" height="832" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true" data-auto></video><span class="play" aria-hidden="true"></span><span class="video-etq">Polea</span></button></li>
+        <li><button class="video-card" type="button" data-visor="video" data-src="videos/entreno-3.mp4" aria-label="Ver video en grande: Bíceps"><video src="videos/entreno-3.mp4" poster="imagenes/entreno-3.jpg" width="464" height="832" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true" data-auto></video><span class="play" aria-hidden="true"></span><span class="video-etq">Bíceps</span></button></li>
+        <li><button class="video-card" type="button" data-visor="video" data-src="videos/entreno-4.mp4" aria-label="Ver video en grande: Mancuernas"><video src="videos/entreno-4.mp4" poster="imagenes/entreno-4.jpg" width="464" height="832" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true" data-auto></video><span class="play" aria-hidden="true"></span><span class="video-etq">Mancuernas</span></button></li>
+        <li><button class="video-card" type="button" data-visor="video" data-src="videos/entreno-5.mp4" aria-label="Ver video en grande: C4 Energy"><video src="videos/entreno-5.mp4" poster="imagenes/entreno-5.jpg" width="464" height="832" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true" data-auto></video><span class="play" aria-hidden="true"></span><span class="video-etq">C4 Energy</span></button></li>
+      </ul>
     </section>
 
     <section class="seccion" id="testimonios" aria-labelledby="t-test" hidden>
@@ -196,6 +213,13 @@
     <p class="pie-marca">URRAAAK FITNESS — Forjando tu prime.</p>
     <p>© <span id="anio">2026</span> Rair Mathews. Todos los derechos reservados.</p>
   </footer>
+
+  <dialog id="visor" class="visor" aria-label="Visor de fotos y videos">
+    <button class="visor-cerrar" type="button" aria-label="Cerrar">&times;</button>
+    <button class="visor-nav visor-ant" type="button" aria-label="Anterior">&#8249;</button>
+    <div class="visor-medio"></div>
+    <button class="visor-nav visor-sig" type="button" aria-label="Siguiente">&#8250;</button>
+  </dialog>
 
   <a class="wa-flotante" href="https://wa.me/50672431311?text=Hola%20Rair%2C%20quiero%20empezar%20a%20entrenar." target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
     <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 2.4a10.6 10.6 0 1 1-5.4 19.7l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 0 1 16 5.4zm-4 5.3c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.500 3.900c.2.2 2.600 4.100 6.400 5.600 3.200 1.200 3.800 1 4.500.9.700-.1 2.200-.9 2.500-1.800.3-.9.3-1.600.2-1.800-.1-.2-.4-.3-.8-.5l-2.600-1.200c-.3-.1-.6-.2-.8.2-.3.400-1 1.200-1.200 1.400-.2.200-.4.300-.8.100-.4-.2-1.600-.6-3-1.900-1.100-1-1.900-2.200-2.100-2.600-.2-.4 0-.6.200-.8l.6-.7c.2-.2.200-.4.400-.6.100-.3.100-.5 0-.7l-1.200-2.900c-.3-.7-.6-.6-.8-.6z"/></svg>

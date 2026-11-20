@@ -117,7 +117,7 @@
     };
 
     // Aparición al llegar a cada parte; se escalonan los hermanos
-    var objetivos = document.querySelectorAll('.pilares li, .objetivos li, .servicios li, .datos > div, .vias li, .cifras > div, .cita, .form');
+    var objetivos = document.querySelectorAll('.pilares li, .objetivos li, .servicios li, .datos > div, .vias li, .cifras > div, .videos li, .cita, .form');
     objetivos.forEach(function (el) {
       var hermanos = Array.prototype.filter.call(el.parentElement.children, function (x) { return x.tagName === el.tagName; });
       el.style.setProperty('--i', String(Math.max(0, hermanos.indexOf(el))));
@@ -169,6 +169,75 @@
       });
       hero.addEventListener('pointerleave', function () { fotoHero.style.transform = ''; });
     }
+  }
+
+  // ---- Videos de las tarjetas: se reproducen mudos solo mientras se ven
+  var tarjetas = document.querySelectorAll('video[data-auto]');
+  if (!calma && 'IntersectionObserver' in window) {
+    var ioVideo = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (en) {
+        var v = en.target;
+        if (en.isIntersecting) {
+          var p = v.play();
+          if (p && p.catch) p.catch(function () {});
+        } else {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.6 });
+    tarjetas.forEach(function (v) { ioVideo.observe(v); });
+  }
+
+  // ---- Visor para ampliar fotos y ver videos con sonido
+  var visor = document.getElementById('visor');
+  if (visor && typeof visor.showModal === 'function') {
+    var medio = visor.querySelector('.visor-medio');
+    var lista = [];
+    var pos = 0;
+    var vaciar = function () {
+      var v = medio.querySelector('video');
+      if (v) v.pause();
+      medio.textContent = '';
+    };
+    var mostrar = function (i) {
+      pos = (i + lista.length) % lista.length;
+      var el = lista[pos];
+      vaciar();
+      if (el.getAttribute('data-visor') === 'video') {
+        var vid = document.createElement('video');
+        vid.src = el.getAttribute('data-src');
+        vid.controls = true;
+        vid.autoplay = true;
+        vid.loop = true;
+        vid.playsInline = true;
+        medio.appendChild(vid);
+      } else {
+        var img = document.createElement('img');
+        img.src = el.getAttribute('data-src');
+        img.alt = el.getAttribute('data-alt') || '';
+        medio.appendChild(img);
+      }
+    };
+    var botones = document.querySelectorAll('[data-visor]');
+    botones.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var tipo = b.getAttribute('data-visor');
+        lista = Array.prototype.filter.call(botones, function (x) { return x.getAttribute('data-visor') === tipo; });
+        // las fotos ocultas por no cargar no se incluyen
+        lista = lista.filter(function (x) { return !x.closest('[hidden]'); });
+        visor.showModal();
+        mostrar(lista.indexOf(b));
+      });
+    });
+    visor.querySelector('.visor-ant').addEventListener('click', function () { mostrar(pos - 1); });
+    visor.querySelector('.visor-sig').addEventListener('click', function () { mostrar(pos + 1); });
+    visor.querySelector('.visor-cerrar').addEventListener('click', function () { visor.close(); });
+    visor.addEventListener('click', function (e) { if (e.target === visor) visor.close(); });
+    visor.addEventListener('close', vaciar);
+    visor.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') mostrar(pos - 1);
+      if (e.key === 'ArrowRight') mostrar(pos + 1);
+    });
   }
 
   // ---- Barra de avance de lectura

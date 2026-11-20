@@ -4,7 +4,7 @@ Sitio estático (HTML, CSS, JS). Para publicar: copiar el contenido de esta carp
 El archivo `_headers` aplica los encabezados de seguridad si se publica con Cloudflare.
 
 ## Pendiente por completar
-- Fotos en `imagenes/` (ver `imagenes/LEEME.txt`). Sin foto, esa parte se oculta sola.
+- Fotos: ya están la portada, la de "Sobre mí", 6 en la galería y 5 videos. Faltan fotos con clientes y antes y después.
 - Testimonios reales: arreglo `TESTIMONIOS` en `js/main.js`.
 - Nivel del curso "Acondicionamiento físico aplicado al entrenamiento contra resistencia".
 - Confirmar nombres: "Kidder Marshal" y "Froylan Guthrie".
